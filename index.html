@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./redac.js" defer></script>
+    <link rel="stylesheet" href="./redac.css">
+    <title>Redactr</title>
+</head>
+
+<body>
+    <header>Redactr</header>
+    <form action="./index.html">
+        <summary id="summary"></summary>
+        <input type="text" id="input" placeholder="Enter words to be redacted">
+        <section>
+            <label for="scrambler">Choose a symbol:&nbsp;</label>
+            <select name="scrambler" id="scrambler">
+                <option value="?">?</option>
+                <option value="*">*</option>
+                <option value="_">_</option>
+                <option value="-">-</option>
+            </select>
+        </section>
+        <p>For multiple words, separate each word with a single space</p>
+        <textarea name="" id="text" cols="30" rows="10" spellcheck="false" contenteditable="true" required></textarea>
+        <textarea name="" id="redacted" cols="30" rows="10"></textarea>
+    </form>
+    <aside>
+        <button id="button">Redact</button>
+        <button id="clear">Clear</button>
+    </aside>
+</body>
+
+</html>
