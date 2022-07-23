@@ -2,10 +2,13 @@
 const summary = document.getElementById("summary");
 let text = document.getElementById("text");
 const redacted = document.getElementById("redacted");
-const button = document.getElementById("button");
-const clear = document.getElementById("clear");
 const input = document.getElementById("input");
 const scrambler = document.getElementById("scrambler");
+
+// DOM buttons
+const button = document.getElementById("button");
+const clear = document.getElementById("clear");
+const copy = document.getElementById("copy");
 
 // redact button
 button.addEventListener("click", () => {
@@ -64,4 +67,13 @@ clear.addEventListener("click", () => {
   redacted.value = "";
   summary.innerHTML = "";
   input.value = "";
+});
+
+// copy function
+copy.addEventListener("click", () => {
+  // select output text field
+  redacted.select();
+  redacted.setSelectionRange(0, 99999);
+  // copy text to clipboard
+  navigator.clipboard.writeText(redacted.value);
 });
