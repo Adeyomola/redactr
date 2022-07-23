@@ -122,7 +122,8 @@ button {
     font-family: 'Nunito';
 }
 
-button:active {
+button:active,
+button:hover {
     transform: translate(0.1rem, 0.1rem);
 }
 
