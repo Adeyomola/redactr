@@ -1,22 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Nunito:wght@300&family=Roboto:wght@100;400&family=Tiro+Devanagari+Sanskrit:ital@1&display=swap');
 
-:root {
-    background-color: #ecf5ff;
-    font-size: 62.5%;
-}
-
 * {
     box-sizing: border-box;
     border: 0;
     padding: 0;
 }
 
-html {
-    width: 100%;
+:root {
+    background-color: #ecf5ff;
+    font-size: 62.5%;
 }
 
+
 body {
-    width: 95%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -49,7 +45,7 @@ summary {
 
 input {
     margin: 1rem auto;
-    width: 30%;
+    width: 55%;
     padding: 1rem;
     border-radius: 5px;
     outline: none;
@@ -73,13 +69,18 @@ select {
     padding: 0.3rem;
 }
 
-p {
+span {
     text-align: center;
-    font-size: 1.4rem;
+    font-size: 1rem;
     font-family: 'Nunito';
     font-style: italic;
-    grid-column: span 4;
+    grid-column: span 2;
     color: darkcyan;
+    margin-bottom: 0.5rem;
+}
+
+div {
+    grid-column: span 2;
 }
 
 #text,
@@ -92,14 +93,13 @@ p {
     margin: auto;
     border-radius: 5px;
     padding: 1rem;
-    font-family: calibri;
+    font-family: 'Nunito';
     resize: none;
 }
 
 aside {
-    width: 100%;
+    width: 20%;
     display: flex;
-    flex-direction: column;
 }
 
 label {
@@ -107,14 +107,23 @@ label {
     font-family: 'Nunito';
 }
 
+img {
+    width: 100%;
+    filter: invert(100%);
+}
+
 button {
-    width: 6%;
+    width: 30%;
     padding: 1rem;
     margin: 1.5rem auto 0 auto;
     border-radius: 5px;
     background-color: darkcyan;
     color: white;
     font-family: 'Nunito';
+}
+
+button:active {
+    transform: translateX(0.1rem);
 }
 
 @media (min-width:320px) and (max-width:359px) {
@@ -137,12 +146,12 @@ button {
         font-size: 1rem;
     }
 
-    button {
-        width: 20%;
+    aside {
+        width: 80%;
     }
 
-    p {
-        font-size: 1rem;
+    button {
+        width: 30%;
     }
 }
 
@@ -154,7 +163,7 @@ button {
     }
 
     input {
-        width: 100%;
+        width: 90%;
         font-size: 1.1rem;
     }
 
@@ -162,16 +171,17 @@ button {
         width: 25%;
     }
 
+
     label {
         font-size: 1.2rem;
     }
 
-    p {
-        font-size: 1.3rem;
+    aside {
+        width: 80%;
     }
 
     button {
-        width: 20%;
+        width: 30%;
     }
 }
 
@@ -184,8 +194,11 @@ button {
         width: 10%;
     }
 
-    button {
-        width: 10%;
+    aside {
+        width: 40%;
     }
 
+    button {
+        width: 30%;
+    }
 }

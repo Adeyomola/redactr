@@ -9,6 +9,7 @@ const scrambler = document.getElementById("scrambler");
 
 // redact button
 button.addEventListener("click", () => {
+  if (text.value == "") return; // returns the function if there is no user input
   let start = performance.now() / 1000; //execution time start (divided by 1000 to convert milliseconds to seconds)
   let adjustedText = text.value.replace(/[,?:;""''.!-{}[]()]/g, ""); //remove punctuation marks
   let textArray = adjustedText.split(" "); //An array of user input text

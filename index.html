@@ -24,13 +24,16 @@
                 <option value="-">-</option>
             </select>
         </section>
-        <p>For multiple words, separate each word with a single space</p>
-        <textarea name="" id="text" cols="30" rows="10" spellcheck="false" contenteditable="true" required></textarea>
-        <textarea name="" id="redacted" cols="30" rows="10"></textarea>
+        <span>For multiple words, separate each word with a single space</span>
+        <div></div>
+        <textarea name="" id="text" cols="30" rows="10" spellcheck="false" contenteditable="true"
+            placeholder="Enter Full Text Here" required></textarea>
+        <textarea name="" id="redacted" cols="30" rows="10" placeholder="Redacted Text Appears Here" readonly></textarea>
     </form>
     <aside>
         <button id="button">Redact</button>
-        <button id="clear">Clear</button>
+        <button id="copy"><img src="./copy-interface-symbol-svgrepo-com.svg" width="15" height="15" alt="copy"></button>
+        <button id="clear"><img src="./delete-button-svgrepo-com.svg" width="15" height="18" alt="clear"></button>
     </aside>
 </body>
 
