@@ -147,11 +147,12 @@ button:active {
     }
 
     aside {
-        width: 80%;
+        width: 100%;
+        padding: 0 1rem;
     }
 
     button {
-        width: 30%;
+        width: 25%;
     }
 }
 
@@ -177,11 +178,12 @@ button:active {
     }
 
     aside {
-        width: 80%;
+        width: 100%;
+        padding: 0 1rem;
     }
 
     button {
-        width: 30%;
+        width: 25%;
     }
 }
 
@@ -195,10 +197,11 @@ button:active {
     }
 
     aside {
-        width: 40%;
+        width: 50%;
+        padding: 0 1rem;
     }
 
     button {
-        width: 30%;
+        width: 25%;
     }
 }
