@@ -120,10 +120,11 @@ button {
     background-color: darkcyan;
     color: white;
     font-family: 'Nunito';
+    transition: 0.1s;
 }
 
 button:active {
-    transform: translate(0.1rem, 0.1rem);
+    transform: translate(0.2rem, 0.1rem);
 }
 
 @media (min-width:320px) and (max-width:359px) {
