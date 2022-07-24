@@ -121,6 +121,7 @@ button {
     color: white;
     font-family: 'Nunito';
     transition: 0.1s;
+    font-size: 1.1rem;
 }
 
 button:active {
@@ -155,6 +156,7 @@ button:active {
 
     button {
         width: 25%;
+        font-size: 0.9rem;
     }
 }
 
