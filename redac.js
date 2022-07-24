@@ -14,9 +14,8 @@ const copy = document.getElementById("copy");
 button.addEventListener("click", () => {
   if (text.value == "") return; // returns the function if there is no user input
   let start = performance.now() / 1000; //execution time start (divided by 1000 to convert milliseconds to seconds)
-  let adjustedText = text.value.replace(/[,?:;""''.!-{}[]()]/g, ""); //remove punctuation marks
-  let textArray = adjustedText.split(" "); //An array of user input text
-
+  let regex = /[,?""'':;!\[\]\.\(\)\{\}]/g; // regular expression for punctuation marks
+  let textArray = text.value.split(" "); //An array of user input text
   //   counters for number of words matched and number of characters scrambled, respectively
   let count = 0;
   let charScrambled = 0;
@@ -26,16 +25,14 @@ button.addEventListener("click", () => {
     let inputArray = input.value.split(" "); //converting the words to be redacted into an array
 
     for (userInput of inputArray) {
-      if (word.toLowerCase() == userInput.toLowerCase()) {
+      if (userInput.toLowerCase() == word.toLowerCase().replace(regex, "")) {
         count++;
-        word = scrambler.value.repeat(word.length);
+        word = scrambler.value.repeat(userInput.length);
       }
     }
     return word;
   });
-
-  let redactedString = newArray.toString();
-  redacted.value = redactedString.replace(/(,,|,)/g, " ");
+  redacted.value = newArray.join(" ");
 
   //  looping over the redacted text to get a count of the total redacted characters
   for (let char of redacted.value) {
