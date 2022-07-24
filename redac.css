@@ -97,6 +97,10 @@ div {
     resize: none;
 }
 
+#redacted {
+    background-color: white;
+}
+
 aside {
     width: 20%;
     display: flex;
