@@ -14,6 +14,7 @@ const copy = document.getElementById("copy");
 button.addEventListener("click", () => {
   if (text.value == "") return; // returns the function if there is no user input
   let start = performance.now() / 1000; //execution time start (divided by 1000 to convert milliseconds to seconds)
+  text.value.replace(/\n/, ".");
   let textArray = text.value.split(" "); //An array of user input text
   //   counters for number of words matched and number of characters scrambled, respectively
   let count = 0;
@@ -22,12 +23,24 @@ button.addEventListener("click", () => {
   //   converting the text array into a newArray where the input words are redacted
   const newArray = textArray.map((word) => {
     let inputArray = input.value.split(" "); //converting the words to be redacted into an array
-    let regex = /[,?""'':;!\[\]\.\(\)\{\}]/g; // regular expression for punctuation marks
+    let regex = /[\W\s]/g;
 
-    for (userInput of inputArray) {
+    for (let userInput of inputArray) {
       if (userInput.toLowerCase() == word.toLowerCase().replace(regex, "")) {
         count++;
-        word = scrambler.value.repeat(userInput.length);
+        word =
+          scrambler.value.repeat(userInput.length) +
+          word.substr(userInput.length);
+        // substring method ensures the punctuations after the redacted word appear in the redacted text
+      } else if (
+        userInput.toLowerCase() ==
+        word.toLowerCase().substr(0, userInput.length).replace(regex, "")
+      ) {
+        count++;
+        word =
+          scrambler.value.repeat(userInput.length) +
+          word.substr(userInput.length);
+        // substring method ensures the punctuations and word after the redacted word appear in the redacted text
       }
     }
     return word;
