@@ -15,8 +15,9 @@ button.addEventListener("click", () => {
   if (text.value == "") return; // returns the function if there is no user input
   let start = performance.now() / 1000; //execution time start (divided by 1000 to convert milliseconds to seconds)
   text.value = text.value.replace(/\n/g, " \n"); // this ensures line-breaking space does not join two words together
+  console.log(text.value);
   let textArray = text.value.split(" "); //An array of user input text
-
+  console.log(textArray);
   //   counters for number of words matched and number of characters scrambled, respectively
   let count = 0;
   let charScrambled = 0;
@@ -24,12 +25,15 @@ button.addEventListener("click", () => {
   //   converting the text array into a newArray where the input words are redacted
   const newArray = textArray.map((word) => {
     let inputArray = input.value.split(" "); //converting the words to be redacted into an array
-    let regex = /[\W\s]/g; //regex for all non-word characters and whitespace characters
+    let regex = /[\W\s\d]/g; //regex for all non-word characters and whitespace characters
 
     for (let userInput of inputArray) {
       let userInputRegex = new RegExp(userInput, "gi");
 
-      if (userInput.toLowerCase() == word.toLowerCase().replace(regex, "")) {
+      if (
+        userInput.toLowerCase().replace(regex, "") ==
+        word.toLowerCase().replace(regex, "")
+      ) {
         count++;
         word = word.replace(
           userInputRegex,
