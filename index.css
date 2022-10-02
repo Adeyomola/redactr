@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Calligraffitti&family=Caveat&family=Nunito:wght@200&family=Quicksand:wght@300;500&family=Roboto:wght@100&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 75%;
+}
+
+.row {
+    transform: translateY(80%);
+}
+
+body {
+    background-color: rgb(0, 37, 75);
+    color: white;
+}
+
+header {
+    position: relative;
+}
+
+#indextitle span {
+    font-size: 10rem;
+    font-weight: 600;
+    font-family: "Quicksand";
+    display: inline-block;
+    animation: flip 2s;
+    animation-iteration-count: 3;
+    animation-delay: calc(.2s * var(--i))
+}
+
+@keyframes flip {
+
+    0%,
+    80% {
+        transform: rotateY(360deg)
+    }
+}
+
+.btn {
+    background-color: white;
+    font: 0.9rem 'Quicksand';
+    font-weight: 600;
+    color: rgb(0, 37, 75);
+    border: 1px solid rgb(0, 37, 75);
+}
+
+@media (min-width:0px) and (max-width:359px) {
+    #indextitle span {
+        font-size: 5.8rem;
+    }
+
+    .row {
+        transform: translateY(50%);
+    }
+
+    .btn {
+        width: 35%;
+    }
+}
+
+@media (min-width:360px) and (max-width:760px) {
+    #indextitle span {
+        font-size: 6.5rem;
+    }
+
+    .row {
+        transform: translateY(95%);
+    }
+
+    .btn {
+        width: 30%;
+    }
+}
+
+@media (min-width:761px) and (max-width:1280px) {
+    #indextitle span {
+        font-size: 8rem;
+    }
+
+    .row {
+        transform: translateY(130%);
+    }
+
+    .btn {
+        width: 20%;
+    }
+}

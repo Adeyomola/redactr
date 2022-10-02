@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./redac.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="./redac.css">
+    <title>Redactr</title>
+</head>
+
+<body>
+    <header class="nav justify-content-center">Redactr</header>
+    <div class="container">
+        <div class="container row m-auto justify-content-center p-2">
+            <input type="text" class="col-md-4 p-3" id="input" placeholder="Enter words to be redacted">
+            <p class="col-md-5 pt-3">For multiple words, separate each word with a single space</p>
+        </div>
+        <div class="container row m-auto justify-content-center p-2">
+            <input type="text" class="col-md-4 p-3" id="scrambler" placeholder="Enter a symbol">
+            <p class="col-md-5 pt-3">Enter a single character</p>
+        </div>
+        <form action="./index.html" class="container row p-2 m-auto justify-content-center">
+            <textarea class="col-lg-9 p-2" name="" id="text" spellcheck="false" contenteditable="true"
+                placeholder="Enter the text you want to redact here" required></textarea>
+        </form>
+        <aside class="container row m-auto justify-content-center py-2">
+            <button id="button" class="col-sm-1 btn btn-light m-2 p-3">Redact Now</button>
+            <button id="clear" class="col-sm-1 btn btn-light m-2 p-3"><img src="./delete-button-svgrepo-com.svg"
+                    width="15" height="15" alt="clear"></button>
+            <a href="./index.html" class="col-sm-1 btn btn-light m-2 p-3">Home</a>
+        </aside>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.16/dist/sweetalert2.all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

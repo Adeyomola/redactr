@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Calligraffitti&family=Caveat&family=Nunito:wght@200&family=Quicksand:wght@300;500&family=Roboto:wght@100&display=swap');
+
+:root {
+    font-size: 55%;
+}
+
+.row {
+    transform: translateY(5%);
+    font: 2rem 'Nunito';
+    line-height: 3.5rem;
+    text-align: justify;
+}
+
+#aboutRedactr {
+    font-size: 5rem;
+    font-weight: 600;
+    text-align: center;
+    margin: 2.5rem;
+}
+
+body {
+    background-color: rgb(0, 37, 75);
+    color: white;
+}
+
+.btn {
+    background-color: white;
+    font: 1.2rem 'Quicksand';
+    font-weight: 600;
+    color: rgb(0, 37, 75);
+    border: 1px solid rgb(0, 37, 75);
+}
+
+@media (min-width:0px) and (max-width:359px) {
+    .m-2 {
+        font-size: 1.8rem;
+        text-align: justify;
+    }
+
+    .row {
+        transform: translateY(0%);
+    }
+
+    #aboutRedactr {
+        font-size: 4rem;
+    }
+
+    .btn {
+        width: 35%;
+    }
+}
+
+@media (min-width:360px) and (max-width:760px) {
+    .m-2 {
+        text-align: justify;
+    }
+
+    .row {
+        transform: translateY(0%);
+    }
+
+    #aboutRedactr {
+        font-size: 4.5rem;
+    }
+
+    .btn {
+        width: 30%;
+    }
+}
+
+@media (min-width:761px) and (max-width:1280px) {
+    .m-2 {
+        text-align: justify;
+    }
+
+    .row {
+        transform: translateY(5%);
+    }
+
+    .btn {
+        width: 20%;
+    }
+}
