@@ -90,3 +90,27 @@ header {
         width: 20%;
     }
 }
+
+@media (min-width: 0px) and (max-width: 600px) and (orientation: landscape) {
+    .row {
+        transform: translateY(20%);
+    }
+}
+
+@media (min-width: 601px) and (max-width: 780px) and (orientation: landscape) {
+    .row {
+        transform: translateY(25%);
+    }
+}
+
+@media (min-width: 780px) and (max-width: 1023px) and (orientation: landscape) {
+    .row {
+        transform: translateY(23%);
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1280px) and (orientation: landscape) {
+    .row {
+        transform: translateY(100%);
+    }
+}
