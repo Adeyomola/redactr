@@ -59,7 +59,7 @@ button.addEventListener("click", () => {
 
   localStorage.setItem("Redacted", JSON.stringify(Redacted));
   setInterval(() => {
-    return window.location.assign("/redacted.html");
+    return window.location.assign("/redactr/redacted.html");
   }, 1000);
 });
 
